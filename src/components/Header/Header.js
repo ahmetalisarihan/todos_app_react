@@ -12,12 +12,17 @@ function Header({ todos, setTodos }) {
     setTodos([
       ...todos,
       {
-        id: todos.lenght > 0 ? todos[todos.lenght - 1].id + 1 : 0,
+        id: todos.length > 0 ? todos[todos.length - 1].id + 1 : 0,
         todo: form,
         checked: false,
       },
     ]);
   };
+
+  useEffect(() => {
+    setForm("")
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }, [todos])
 
   return (
     <header className="header">

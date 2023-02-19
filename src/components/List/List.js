@@ -41,10 +41,10 @@ function List({ todos, setTodos, hide }) {
                 onClick={checkTodo}
               />
               <label>{todo.todo}</label>
-              <button className="destroy"
+              <button 
+              className="destroy"
               id={todo.id}
               onClick={deleteTodo}>
-
               </button>
             </div>
           </li>
